@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "561633470569",
+    "firebase_url": "https://ardunio-password-default-rtdb.firebaseio.com",
+    "project_id": "ardunio-password",
+    "storage_bucket": "ardunio-password.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:561633470569:android:5ffae0a5f118690fbf9af8",
+        "android_client_info": {
+          "package_name": "com.example.password_control"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "561633470569-9btc0676nce9fujpja18pui4eq3j9574.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCipjBtAqwSDZKLqoQzC4bOkHavqXNCPTg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "561633470569-9btc0676nce9fujpja18pui4eq3j9574.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:561633470569:android:02b7d456a5826849bf9af8",
+        "android_client_info": {
+          "package_name": "com.example.realtime_todo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "561633470569-9btc0676nce9fujpja18pui4eq3j9574.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCipjBtAqwSDZKLqoQzC4bOkHavqXNCPTg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "561633470569-9btc0676nce9fujpja18pui4eq3j9574.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
