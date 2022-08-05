@@ -2,6 +2,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:flutter/material.dart';
+import 'package:realtime_todo/pages/chat/chat_page.dart';
+
+import '../../core/route/route_class.dart';
 
 class Allsers extends StatefulWidget {
   const Allsers({Key? key}) : super(key: key);
@@ -13,11 +16,12 @@ class Allsers extends StatefulWidget {
 class _AllsersState extends State<Allsers> {
   final user = FirebaseAuth.instance.currentUser!;
   late Query dbRef;
+  final NavigationRoutes routes = NavigationRoutes();
 
   @override
   void initState() {
     super.initState();
-
+    print(user.uid);
     dbRef = FirebaseDatabase.instance.ref().child('usersInfo');
   }
 
@@ -44,38 +48,43 @@ class _AllsersState extends State<Allsers> {
   }
 
   Widget listItem({required Map users}) {
-    return Container(
-      margin: const EdgeInsets.all(10),
-      padding: const EdgeInsets.all(15),
-      decoration: BoxDecoration(
-          color: Colors.tealAccent, borderRadius: BorderRadius.circular(12)),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Text(
-                users['email'],
-                style:
-                    const TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
-              ),
-              const Spacer(),
-              Text(
-                users['id'],
-                style:
-                    const TextStyle(fontSize: 11, fontWeight: FontWeight.w400),
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 5,
-          ),
-          Text(
-            users['password'],
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
-          ),
-        ],
+    return InkWell(
+      onTap: () {
+        routes.navigateToPage(context, ChatPage(uid: users['id']));
+      },
+      child: Container(
+        margin: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(15),
+        decoration: BoxDecoration(
+            color: Colors.tealAccent, borderRadius: BorderRadius.circular(12)),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Text(
+                  users['email'],
+                  style: const TextStyle(
+                      fontSize: 16, fontWeight: FontWeight.w400),
+                ),
+                const Spacer(),
+                Text(
+                  users['id'],
+                  style: const TextStyle(
+                      fontSize: 11, fontWeight: FontWeight.w400),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            Text(
+              users['password'],
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+            ),
+          ],
+        ),
       ),
     );
   }

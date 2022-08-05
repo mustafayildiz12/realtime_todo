@@ -54,7 +54,7 @@ class LoginPage extends StatelessWidget {
           ),
           TextButton(
               onPressed: () {
-                routes.navigateToWidget(context, const RegisterPage());
+                routes.navigateToPage(context, const RegisterPage());
               },
               child: const Text('Register'))
         ],

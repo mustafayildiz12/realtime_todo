@@ -36,7 +36,7 @@ class _NoteListState extends State<NoteList> {
           actions: [
             IconButton(
                 onPressed: () {
-                  routes.navigateToWidget(context, const Allsers());
+                  routes.navigateToPage(context, const Allsers());
                 },
                 icon: const Icon(Icons.person))
           ],

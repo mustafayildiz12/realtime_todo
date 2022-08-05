@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "561633470569-nj6u4d5ke7ffq9e26nj5iqh2uor70ab0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.password_control",
+            "certificate_hash": "a62daebc4ef298a371a4b11d16264c805505baec"
+          }
+        },
+        {
           "client_id": "561633470569-9btc0676nce9fujpja18pui4eq3j9574.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -43,6 +51,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "561633470569-68hi26klvs4vr0ltsbm1bcnbn2l1ovis.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.realtime_todo",
+            "certificate_hash": "a62daebc4ef298a371a4b11d16264c805505baec"
+          }
+        },
         {
           "client_id": "561633470569-9btc0676nce9fujpja18pui4eq3j9574.apps.googleusercontent.com",
           "client_type": 3

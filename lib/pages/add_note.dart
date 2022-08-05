@@ -82,7 +82,7 @@ class _AddNotePageState extends State<AddNotePage> {
             TextButton(
                 onPressed: () async {
                   await user.signOut().whenComplete(() {
-                    routes.navigateToWidget(context, LoginPage());
+                    routes.navigateToPage(context, LoginPage());
                   });
                 },
                 child: const Text("Exit"))

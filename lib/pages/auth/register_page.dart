@@ -50,8 +50,8 @@ class _RegisterPageState extends State<RegisterPage> {
     }
   }
 
-  void navigate() async {
-    await routes.navigateToFuture(context, const AddNotePage());
+  void navigate() {
+    routes.navigateToPage(context, const AddNotePage());
   }
 
   @override
@@ -82,7 +82,7 @@ class _RegisterPageState extends State<RegisterPage> {
           ),
           TextButton(
               onPressed: () {
-                routes.navigateToWidget(context, LoginPage());
+                routes.navigateToPage(context, LoginPage());
               },
               child: const Text('Login'))
         ],

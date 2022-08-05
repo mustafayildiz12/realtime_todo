@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class NavigationRoutes {
-  void navigateToWidget(BuildContext context, Widget widget) {
+  void navigateToPage(BuildContext context, Widget widget) {
     Navigator.pushAndRemoveUntil(
       context,
       MaterialPageRoute(builder: (context) => widget),
@@ -9,7 +9,8 @@ class NavigationRoutes {
     );
   }
 
-  Future<void> navigateToFuture(BuildContext context, Widget widget) async {
+  Future<void> navigateToPageWithFuture(
+      BuildContext context, Widget widget) async {
     await Navigator.pushAndRemoveUntil(
       context,
       MaterialPageRoute(builder: (context) => widget),
